@@ -10,6 +10,6 @@ config_version=5
 
 [application]
 
-config/name="Justice-Junior"
+config/name="main_menu"
+run/main_scene="res://menu_folder/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"

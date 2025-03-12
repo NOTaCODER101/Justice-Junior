@@ -1,0 +1,123 @@
+[gd_scene load_steps=14 format=3 uid="uid://juwoy5g0k0vu"]
+
+[ext_resource type="Texture2D" uid="uid://gnoevy7pgnps" path="res://options_folder/download.png" id="1_8lxha"]
+[ext_resource type="Script" path="res://options_folder/options_scene3.gd" id="1_wvpsy"]
+[ext_resource type="Texture2D" uid="uid://d33uqqni08r2g" path="res://options_folder/main_screen_options.png" id="2_f1xyb"]
+[ext_resource type="Texture2D" uid="uid://cml52b6y8ps4p" path="res://options_folder/Component 17.png" id="3_ke3es"]
+[ext_resource type="Texture2D" uid="uid://v8tx01w5687b" path="res://options_folder/Component 10.svg" id="4_fonhr"]
+[ext_resource type="Texture2D" uid="uid://byywdjbe7jsih" path="res://options_folder/Component 11.svg" id="5_xa0jm"]
+[ext_resource type="Texture2D" uid="uid://dns3kpblkr30i" path="res://options_folder/Component 12.svg" id="6_vxue0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eatgs"]
+texture = ExtResource("2_f1xyb")
+modulate_color = Color(0.74978, 0.74978, 0.74978, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_06cn3"]
+texture = ExtResource("3_ke3es")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lgqf7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h1pms"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8lfbe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jgkvc"]
+
+[node name="LevelsScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wvpsy")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_eatgs")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.5
+offset_top = -276.5
+offset_right = 261.5
+offset_bottom = 276.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_06cn3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 58.0
+offset_top = 154.0
+offset_right = -60.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 26
+
+[node name="Start_button" type="Button" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_lgqf7")
+icon = ExtResource("4_fonhr")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Options_button" type="Button" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_h1pms")
+icon = ExtResource("5_xa0jm")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Exit_button" type="Button" parent="Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8lfbe")
+icon = ExtResource("6_vxue0")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="cancel_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.133
+anchor_right = 0.851
+anchor_bottom = 1.0
+offset_left = 761.0
+offset_top = 7.816
+offset_right = -142.352
+offset_bottom = -486.0
+grow_horizontal = 0
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_jgkvc")
+icon = ExtResource("1_8lxha")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="cancel_button" to="." method="_on_cancel_button_pressed"]

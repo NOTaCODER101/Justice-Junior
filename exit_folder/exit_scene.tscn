@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://cu03sqwqjpu22"]
+
+[ext_resource type="Script" path="res://exit_folder/exit_scene.gd" id="1_52ttl"]
+[ext_resource type="Texture2D" uid="uid://f4s8xvidylgi" path="res://exit_folder/Exit.png" id="1_62sac"]
+[ext_resource type="Texture2D" uid="uid://da4s2kvwcep3n" path="res://exit_folder/Component 19.svg" id="2_tt7av"]
+[ext_resource type="Texture2D" uid="uid://bfxnqp0bvemw5" path="res://exit_folder/Component 18.svg" id="3_pgk6r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_33dxk"]
+texture = ExtResource("1_62sac")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n3uit"]
+
+[node name="ExitScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_52ttl")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_33dxk")
+
+[node name="yes" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 360.0
+offset_top = 380.0
+offset_right = -609.0
+offset_bottom = -173.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_n3uit")
+icon = ExtResource("3_pgk6r")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="no" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 609.0
+offset_top = 371.0
+offset_right = -358.0
+offset_bottom = -163.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_n3uit")
+icon = ExtResource("2_tt7av")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Panel/yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Panel/no" to="." method="_on_no_pressed"]
