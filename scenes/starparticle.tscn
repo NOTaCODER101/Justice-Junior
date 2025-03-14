@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bms4qtudthq8u"]
+
+[ext_resource type="Texture2D" uid="uid://ysc77utyruna" path="res://assets/ui/Star.png" id="1_spyff"]
+[ext_resource type="Script" path="res://scenes/starparticle.gd" id="2_ii85w"]
+
+[node name="Starparticle" type="CPUParticles2D"]
+emitting = false
+amount = 20
+one_shot = true
+explosiveness = 0.9
+texture = ExtResource("1_spyff")
+direction = Vector2(0, -1)
+spread = 180.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 100.0
+initial_velocity_max = 160.0
+angle_max = 360.0
+scale_amount_min = 0.1
+scale_amount_max = 0.3
+script = ExtResource("2_ii85w")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

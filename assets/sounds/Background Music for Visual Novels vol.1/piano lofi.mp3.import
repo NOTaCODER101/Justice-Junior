@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cu3pg6ewc2kp4"
+path="res://.godot/imported/piano lofi.mp3-64b223d8fcd9c86aac5a507020af4939.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Background Music for Visual Novels vol.1/piano lofi.mp3"
+dest_files=["res://.godot/imported/piano lofi.mp3-64b223d8fcd9c86aac5a507020af4939.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dusnhbdf1w2qy"
+path="res://.godot/imported/moonlight disturbing.mp3-21f5de1b95e04f2aa083c3171cda74ea.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Background Music for Visual Novels vol.1/moonlight disturbing.mp3"
+dest_files=["res://.godot/imported/moonlight disturbing.mp3-21f5de1b95e04f2aa083c3171cda74ea.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

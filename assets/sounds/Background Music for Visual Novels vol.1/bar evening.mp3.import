@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhd4r8hrpoyaw"
+path="res://.godot/imported/bar evening.mp3-80b71aadf4ed6bf794b4ca2eff0a2cd3.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Background Music for Visual Novels vol.1/bar evening.mp3"
+dest_files=["res://.godot/imported/bar evening.mp3-80b71aadf4ed6bf794b4ca2eff0a2cd3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

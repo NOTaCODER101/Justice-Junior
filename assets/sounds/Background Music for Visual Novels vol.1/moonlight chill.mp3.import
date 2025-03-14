@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsktkoyrb02mc"
+path="res://.godot/imported/moonlight chill.mp3-a8406b7c007d8b2b700996fa1a582571.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Background Music for Visual Novels vol.1/moonlight chill.mp3"
+dest_files=["res://.godot/imported/moonlight chill.mp3-a8406b7c007d8b2b700996fa1a582571.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

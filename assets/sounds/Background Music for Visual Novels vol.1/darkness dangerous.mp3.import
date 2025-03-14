@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drry28ia6wn6x"
+path="res://.godot/imported/darkness dangerous.mp3-b9d4d474cfc008cf458191ccc079fead.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Background Music for Visual Novels vol.1/darkness dangerous.mp3"
+dest_files=["res://.godot/imported/darkness dangerous.mp3-b9d4d474cfc008cf458191ccc079fead.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

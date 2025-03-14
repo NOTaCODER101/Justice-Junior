@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cspcscspbg8fo"
+path="res://.godot/imported/acoustic chill.mp3-08d79eccc29f8e0a2221061e3bd498a0.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Background Music for Visual Novels vol.1/acoustic chill.mp3"
+dest_files=["res://.godot/imported/acoustic chill.mp3-08d79eccc29f8e0a2221061e3bd498a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
