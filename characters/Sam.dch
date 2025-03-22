@@ -25,6 +25,24 @@
 "offset": Vector2(0, 0),
 "scale": 0.7,
 "scene": ""
+},
+"Sam_happy": {
+"export_overrides": {
+"image": "\"res://assets/characters/Happy Sam .png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 0.7,
+"scene": ""
+},
+"Sam_sad": {
+"export_overrides": {
+"image": "\"res://assets/characters/Sad Sam.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 0.7,
+"scene": ""
 }
 },
 "scale": 1.0

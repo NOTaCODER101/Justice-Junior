@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://chyuxv88ad56i"]
+
+[ext_resource type="Script" path="res://scenes/level_1.gd" id="1_a274j"]
+[ext_resource type="PackedScene" uid="uid://c0ipvky1trsib" path="res://scenes/startbar.tscn" id="2_aedg5"]
+[ext_resource type="AudioStream" uid="uid://cspcscspbg8fo" path="res://assets/sounds/Background Music for Visual Novels vol.1/acoustic chill.mp3" id="3_mtvdo"]
+
+[node name="level_1" type="Node2D"]
+script = ExtResource("1_a274j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="startbar" parent="CanvasLayer" instance=ExtResource("2_aedg5")]
+offset_right = -1500.0
+offset_bottom = -927.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_mtvdo")
+autoplay = true
+parameters/looping = true

@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://cd08kgm5bjjuj"]
+
+[ext_resource type="Texture2D" uid="uid://b522xx1g85oek" path="res://assets/backgrounds/Main Screen_levels.png" id="1_5mv1j"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_43rbt"]
+[ext_resource type="Texture2D" uid="uid://dwrbm7yxal5c" path="res://assets/ui/startbutton.svg" id="2_vygj4"]
+[ext_resource type="Texture2D" uid="uid://dvj3uwcxxyh2w" path="res://assets/ui/optionsbutton.svg" id="3_28l0v"]
+[ext_resource type="Texture2D" uid="uid://dk8uffusbdkoe" path="res://assets/ui/exitbutton.svg" id="4_aw1sb"]
+[ext_resource type="FontFile" uid="uid://clp5qh241e6q8" path="res://assets/fonts/DancingScript-VariableFont_wght.ttf" id="5_g5w74"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jyrfg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uhavj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ief6"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 6.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_43rbt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -997.0
+offset_top = -553.0
+offset_right = 984.0
+offset_bottom = 565.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5mv1j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.684
+anchor_right = 0.5
+anchor_bottom = 0.684
+offset_left = -94.0
+offset_top = -139.232
+offset_right = 86.0
+offset_bottom = 96.768
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="Start_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_jyrfg")
+icon = ExtResource("2_vygj4")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Options_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_uhavj")
+icon = ExtResource("3_28l0v")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Exit_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_3ief6")
+icon = ExtResource("4_aw1sb")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.5
+offset_top = -74.0
+offset_right = 252.5
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.657727, 0.378873, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_g5w74")
+theme_override_font_sizes/font_size = 80
+text = "Justice Junior"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options_button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit_button" to="." method="_on_exit_button_pressed"]

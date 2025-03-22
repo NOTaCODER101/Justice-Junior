@@ -1,6 +1,8 @@
+Button
+TextureRect
+Label
+HBoxContainer
 AudioStreamPlayer2D
 CPUParticles2D
-TextureRect
 Panel
-HBoxContainer
 CanvasLayer

@@ -6,12 +6,14 @@ Jake: Look who it is! Silly Sam! That’s such a silly name!
 characters/Emma: Yeah! Silly Sam is here! Let’s all call him that!
 Sam: Umm…
 - That’s not nice. Can we just play soccer?”
+	update Sam (Sam_sad)
 	[signal arg="star"]
 	audio "res://assets/sounds/starnoise.wav"
 	Jake: What’s wrong, Sam? Can’t take a joke?
 	characters/Emma: Yeah, we’re just being silly, Sam.
 	Sam: It doesn’t feel like fun to me. Can we just play?
 - Fine. I’ll leave. I didn’t want to play anyway.”
+	update Sam (Sam_sad)
 	Jake: Look, he’s running away!
 	characters/Emma: Guess ‘Silly Sam’ doesn’t want to play!
 	Sam: I wish I could just ignore them…
@@ -25,13 +27,13 @@ Ms_Garcia: Hi Sam, you look a bit down. What happened?
 	[signal arg="star"]
 	audio "res://assets/sounds/starnoise.wav"
 	Ms_Garcia: I’m so glad you told me, Sam. It’s really brave to speak up. Let’s talk to Jake and Emma together.
-	Sam: Thanks, Ms. Garcia. I just want this to stop.”
+	Sam (Sam_happy): Thanks, Ms. Garcia. I just want this to stop.”
 - It’s nothing. I’m okay.
 	Ms_Garcia: You know, Sam, it’s always okay to talk if something’s bothering you.
 	Ms_Garcia: Just remember, I’m here if you need me.
 leave Sam [animation="Fade Out" length="1.0"]
 leave Ms_Garcia [animation="Fade Out" length="1.0" wait="true"]
-join Sam left [animation="Fade In" length="1.0"]
+join Sam (Sam) left [animation="Fade In" length="1.0"]
 join Ms_Garcia leftmost [animation="Fade In" length="1.0"]
 join Jake right [animation="Fade In" length="1.0"]
 join characters/Emma rightmost [animation="Fade In" length="1.0" wait="true"]
@@ -39,12 +41,13 @@ Ms_Garcia: Alright, class, let’s talk about how what we say can sometimes hurt
 - I want to talk about how Jake and Emma made me feel.”
 	[signal arg="star"]
 	audio "res://assets/sounds/starnoise.wav"
-	Sam: (explains what happened on the playground)
+	Sam (Sam): (explains what happened on the playground)
 	Jake: I didn’t mean to make you feel bad, Sam.
 	characters/Emma: Yeah, we thought it was just a joke. Sorry, Sam.
 	Sam: Thanks, guys. It would be nice if we could just be friends.
 - I don’t really want to say anything.”
 	Ms_Garcia: That’s okay, Sam. But remember, it’s important to share when you feel ready.
-	(whispering) Guess he’s too shy to speak up!
-	Sam: Maybe I am
+	Jake: (whispering) Guess he’s too shy to speak up!
+	Sam (Sam_sad): Maybe I am
 Ms_Garcia: I’m proud of you, Sam. You showed a lot of courage today!”
+[end_timeline]

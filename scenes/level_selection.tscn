@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqauryifvrtx2"]
+
+[ext_resource type="Script" path="res://scenes/level_selection.gd" id="1_hsvuf"]
+[ext_resource type="Texture2D" uid="uid://dpje3b1uyt7t7" path="res://assets/backgrounds/level-screen (1).png" id="1_tpija"]
+
+[node name="level_selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hsvuf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_tpija")
+
+[node name="level_1" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104948
+anchor_top = 0.68287
+anchor_right = 0.164687
+anchor_bottom = 0.781148
+offset_left = -83.5
+offset_top = -83.5
+offset_right = 82.8
+offset_bottom = 83.36
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="level_1" to="." method="_on_level_1_button_down"]

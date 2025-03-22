@@ -9,7 +9,7 @@ var current_stars=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_text_signal)
-	print("stars")
+	
 	stars[0].visible=false
 	stars[1].visible=false
 	stars[2].visible=false
