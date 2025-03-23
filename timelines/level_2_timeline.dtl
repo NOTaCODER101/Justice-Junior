@@ -1,0 +1,54 @@
+[background arg="res://assets/backgrounds/Hallway.png" fade="0.0"]
+join Lily left
+join Uncle_Rob right
+Uncle_Rob: Come here, Lily! Give me a big hug! It's been so long since I last saw you.
+Lily: Umm...
+- I don’t like this. I’d rather just wave hello.
+	[signal arg="star"]
+	audio "res://assets/sounds/starnoise.wav"
+	Uncle_Rob: Oh, okay! No problem. A wave is just fine.
+	That’s right, Lily! You can always say no to a touch you don’t like. Your comfort matters.
+	Lily: Thanks, Mom!
+- (Stays silent and lets the hug happen.)
+	Uncle_Rob: See? No harm in a hug!
+	Lily: (thinking, feeling uneasy)  But it didn’t feel right… Why didn’t I say something?
+leave Uncle_Rob [animation="Slide Out Left" length="2.0"]
+leave Lily [animation="Slide Out Right" length="2.0" wait="true"]
+[background arg="res://assets/backgrounds/class.png" fade="1.0"]
+join Lily left
+join Mia right
+Mia: Hey, you look kinda upset. What’s wrong?
+update Lily [animation="Tada"]
+Lily: It’s just… something happened yesterday, and I don’t know if I should talk about it.
+- Something happened, and it made me feel weird. I think I should tell Ms. Carter.
+	[signal arg="star"]
+	audio "res://assets/sounds/starnoise.wav"
+	Mia: That’s a good idea! Ms. Carter is super nice, and she always knows what to do.
+	leave Mia [animation="Slide Out Left" length="2.0"]
+	leave Lily [animation="Slide Out Right" length="2.0" wait="true"]
+	join Lily left
+	join Ms_Carter right [length="1.0" wait="true"]
+	Ms_Carter: Lily, you’re very brave for telling me this. Your feelings matter, and you have the right to feel safe and comfortable.
+	Lily: Really? I was worried I was overreacting.
+	Ms_Carter: Not at all. You did the right thing by speaking up. Always trust your feelings.
+- It’s nothing. Forget it.
+	Mia: Are you sure? You can tell me anything, you know.
+	Lily: Yeah, it’s fine. Just forget I said anything.
+	Mia: Okay… but if you ever want to talk, I’m here.
+	Lily: (thinking) "I don’t know if I should keep this to myself… but what if no one understands?"
+	leave Mia [animation="Slide Out Left" length="2.0"]
+	leave Lily [animation="Slide Out Right" length="2.0" wait="true"]
+join Lily left
+join Mia leftmost
+join Ms_Carter right
+Ms_Carter: It’s important to remember that your body belongs to you. If someone touches you in a way that makes you feel uncomfortable, it’s okay to say NO. And you should always tell a trusted adult."
+- I want to share that we can always tell a trusted adult.
+	[signal arg="star"]
+	audio "res://assets/sounds/starnoise.wav"
+	Lily: Ms. Carter, I think it's important to remember that we can always tell someone we trust if we feel uncomfortable.
+	Ms_Carter: That’s exactly right, Lily! Talking about it helps us stay safe. You are very wise.
+	(The students nod in agreement, and a few other kids raise their hands to share their thoughts.)
+	Lily: I’m glad I spoke up. Maybe this will help someone else too!
+- (Stays quiet, looking down at her desk.)
+	Ms_Carter: Even if you don’t want to speak now, remember that your feelings matter. If something ever feels wrong, you have the right to say no and tell someone you trust.
+	Lily: I wish I could say something… but what if people don’t understand?

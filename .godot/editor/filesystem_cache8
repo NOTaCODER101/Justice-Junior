@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742658188
+::res://::1742739534
 globals.gd::GDScript::-1::1742658086::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::7384360349410121805::1741968417::1742657872::1::::<><>::
-README.md::TextFile::-1::1741968417::0::1::::<><>::
+README.md::TextFile::-1::1742658188::0::1::::<><>::
 ::res://addons/::1742657245
 ::res://addons/dialogic/::1742657246
 plugin.cfg::TextFile::-1::1741968417::0::1::::<><>::
@@ -622,20 +622,26 @@ timeline.gd::GDScript::-1::1741968417::0::1::::DialogicTimeline<>Resource<>::
 TimelineResourceLoader.gd::GDScript::-1::1741968417::0::1::::DialogicTimelineFormatLoader<>ResourceFormatLoader<>::
 TimelineResourceSaver.gd::GDScript::-1::1741968417::0::1::::DialogicTimelineFormatSaver<>ResourceFormatSaver<>::
 ::res://assets/::1742658086
-::res://assets/backgrounds/::1742658188
+::res://assets/backgrounds/::1742739346
 bench.png::CompressedTexture2D::7234409071950122696::1741968417::1742657873::1::::<><>::
 class.png::CompressedTexture2D::4910780245233979735::1741968417::1742657873::1::::<><>::
+Hallway.png::CompressedTexture2D::1314035267569838173::1742546837::1742739543::1::::<><>::
 level-screen (1).png::CompressedTexture2D::8230967069266559806::1742658086::1742658284::1::::<><>::
+Lily room.png::CompressedTexture2D::3075316557890428009::1742546837::1742739543::1::::<><>::
 Main Screen.png::CompressedTexture2D::7008367765536868469::1742658086::1742658284::1::::<><>::
 Main Screen_levels.png::CompressedTexture2D::4549505872778068874::1742658086::1742658284::1::::<><>::
-::res://assets/characters/::1742658188
+::res://assets/characters/::1742739367
 Emma.png::CompressedTexture2D::5033164157834035066::1741968417::1742657872::1::::<><>::
 Happy Sam .png::CompressedTexture2D::2198596559342360274::1742658086::1742658283::1::::<><>::
 Jake.png::CompressedTexture2D::1627998169975553672::1741968417::1742657872::1::::<><>::
+Lily.png::CompressedTexture2D::957326076791597208::1742546835::1742739542::1::::<><>::
+Mia.png::CompressedTexture2D::4760902960677948752::1742546835::1742739542::1::::<><>::
+Mr. Carter.png::CompressedTexture2D::7294419404445236961::1742546836::1742739542::1::::<><>::
 Ms. Garcia.png::CompressedTexture2D::5434069427750931661::1741968417::1742657872::1::::<><>::
 Sad Sam.png::CompressedTexture2D::7997255466744018584::1742658086::1742658283::1::::<><>::
 Sam.png::CompressedTexture2D::4281412272533935858::1741968417::1742657872::1::::<><>::
-::res://assets/fonts/::1742658188
+Uncle Rob.png::CompressedTexture2D::7210474614585675617::1742546836::1742739542::1::::<><>::
+::res://assets/fonts/::1742658283
 DancingScript-VariableFont_wght.ttf::FontFile::5577734806926663133::1742658086::1742658283::1::::<><>::
 ::res://assets/sounds/::1742657873
 starnoise.wav::AudioStreamWAV::3890918881047522669::1741968417::1742657873::1::::<><>::
@@ -651,7 +657,7 @@ goofy guy.mp3::AudioStreamMP3::6603359623703133372::1741968417::1742657871::1:::
 moonlight chill.mp3::AudioStreamMP3::8444477268083056382::1741968417::1742657871::1::::<><>::
 moonlight disturbing.mp3::AudioStreamMP3::8600999602296906836::1741968417::1742657871::1::::<><>::
 piano lofi.mp3::AudioStreamMP3::6235343922321847291::1741968417::1742657871::1::::<><>::
-::res://assets/ui/::1742658188
+::res://assets/ui/::1742658283
 exitbutton.svg::CompressedTexture2D::7930498516500596336::1742658086::1742658283::1::::<><>::
 optionsbutton.svg::CompressedTexture2D::8653544118620094936::1742658086::1742658283::1::::<><>::
 Star.png::CompressedTexture2D::1721871338815672562::1741968417::1742657872::1::::<><>::
@@ -662,7 +668,7 @@ Jake.dch::Resource/DialogicCharacter::-1::1741968417::0::1::::<><>::
 Ms_Garcia.dch::Resource/DialogicCharacter::-1::1742658188::0::1::::<><>::
 Sam.dch::Resource/DialogicCharacter::-1::1742658188::0::1::::<><>::
 ::res://scenes/::1742658188
-level_1.gd::GDScript::-1::1742657817::0::1::::<>Node2D<>::
+level_1.gd::GDScript::-1::1742658188::0::1::::<>Node2D<>::
 level_1.tscn::PackedScene::5314964907533426710::1742656036::0::1::::<><>::res://scenes/level_1.gd<>uid://c0ipvky1trsib::::res://scenes/startbar.tscn<>uid://cspcscspbg8fo::::res://assets/sounds/Background Music for Visual Novels vol.1/acoustic chill.mp3
 level_selection.gd::GDScript::-1::1742658086::0::1::::<>Control<>::
 level_selection.tscn::PackedScene::-1::1742658086::0::1::::<><>::
@@ -670,7 +676,7 @@ main_menu.gd::GDScript::-1::1742658086::0::1::::<>Control<>::
 main_menu.tscn::PackedScene::-1::1742658086::0::1::::<><>::
 starparticle.gd::GDScript::-1::1741968417::0::1::::<>CPUParticles2D<>::
 starparticle.tscn::PackedScene::3267636001417003902::1742656036::0::1::::<><>::uid://ysc77utyruna::::res://assets/ui/Star.png<>res://scenes/starparticle.gd
-startbar.gd::GDScript::-1::1742657817::0::1::::<>Control<>::
+startbar.gd::GDScript::-1::1742658188::0::1::::<>Control<>::
 startbar.tscn::PackedScene::6545026300449197777::1742656036::0::1::::<><>::res://scenes/startbar.gd<>uid://ysc77utyruna::::res://assets/ui/Star.png<>uid://bms4qtudthq8u::::res://scenes/starparticle.tscn
 test.gd::GDScript::-1::1741968417::0::1::::<>Node2D<>::
 test.tscn::PackedScene::2213696459013582508::1741968417::0::1::::<><>::res://scenes/test.gd
