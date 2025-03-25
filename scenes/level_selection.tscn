@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxuixulonn6jw"]
+[gd_scene load_steps=5 format=3 uid="uid://bxuixulonn6jw"]
 
 [ext_resource type="Script" path="res://scenes/level_selection.gd" id="1_hsvuf"]
 [ext_resource type="Texture2D" uid="uid://dpje3b1uyt7t7" path="res://assets/backgrounds/level-screen (1).png" id="1_tpija"]
+[ext_resource type="FontFile" uid="uid://clp5qh241e6q8" path="res://assets/fonts/DancingScript-VariableFont_wght.ttf" id="3_8ehjf"]
+[ext_resource type="Texture2D" uid="uid://c0e4v3sy2c2xs" path="res://assets/ui/button.png" id="4_2mruf"]
 
 [node name="level_selection" type="Control"]
 layout_mode = 3
@@ -18,37 +20,74 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_tpija")
 
-[node name="level_1" type="Button" parent="."]
-self_modulate = Color(1, 1, 1, 0)
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.104948
-anchor_top = 0.68287
-anchor_right = 0.164687
-anchor_bottom = 0.781148
-offset_left = -83.5
-offset_top = -83.5
-offset_right = 82.8
-offset_bottom = 83.36
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -735.5
+offset_top = -151.0
+offset_right = 735.5
+offset_bottom = 151.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="level_1" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.168627, 0.572549, 0.0823529, 1)
+theme_override_fonts/font = ExtResource("3_8ehjf")
+theme_override_font_sizes/font_size = 120
+text = "1"
+icon = ExtResource("4_2mruf")
+flat = true
+icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="level_2" type="Button" parent="."]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.290885
-anchor_top = 0.685648
-anchor_right = 0.350624
-anchor_bottom = 0.783926
-offset_left = -83.5
-offset_top = -83.5
-offset_right = 82.8
-offset_bottom = 83.36
-grow_horizontal = 2
-grow_vertical = 2
+[node name="level_2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.168627, 0.572549, 0.0823529, 1)
+theme_override_fonts/font = ExtResource("3_8ehjf")
+theme_override_font_sizes/font_size = 120
+text = "2"
+icon = ExtResource("4_2mruf")
+flat = true
+icon_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[connection signal="button_down" from="level_1" to="." method="_on_level_1_button_down"]
-[connection signal="button_down" from="level_2" to="." method="_on_level_2_button_down"]
+[node name="level_3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.168627, 0.572549, 0.0823529, 1)
+theme_override_fonts/font = ExtResource("3_8ehjf")
+theme_override_font_sizes/font_size = 120
+text = "3"
+icon = ExtResource("4_2mruf")
+flat = true
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="level_4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.168627, 0.572549, 0.0823529, 1)
+theme_override_fonts/font = ExtResource("3_8ehjf")
+theme_override_font_sizes/font_size = 120
+text = "4"
+icon = ExtResource("4_2mruf")
+flat = true
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="level_5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.168627, 0.572549, 0.0823529, 1)
+theme_override_fonts/font = ExtResource("3_8ehjf")
+theme_override_font_sizes/font_size = 120
+text = "5"
+icon = ExtResource("4_2mruf")
+flat = true
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="HBoxContainer/level_1" to="." method="_on_level_1_button_down"]
+[connection signal="button_down" from="HBoxContainer/level_2" to="." method="_on_level_2_button_down"]

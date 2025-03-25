@@ -1,7 +1,7 @@
+HBoxContainer
 Button
 TextureRect
 Label
-HBoxContainer
 AudioStreamPlayer2D
 CPUParticles2D
 Panel
