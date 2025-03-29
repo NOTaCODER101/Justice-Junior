@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Justice-Junior"
 run/main_scene="res://scenes/main_menu.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -23,6 +23,7 @@ Globals="*res://globals.gd"
 [dialogic]
 
 directories/dch_directory={
+"Emma": "res://characters/Emma.dch",
 "Jake": "res://characters/Jake.dch",
 "Lily": "res://characters/Lily.dch",
 "Mia": "res://characters/Mia.dch",
@@ -30,7 +31,6 @@ directories/dch_directory={
 "Ms_Garcia": "res://characters/Ms_Garcia.dch",
 "Sam": "res://characters/Sam.dch",
 "Uncle_Rob": "res://characters/Uncle_Rob.dch",
-"characters/Emma": "res://characters/Emma.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
@@ -71,10 +71,12 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-variables={}
+variables={
+"stars": 0
+}
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://style.tres"]
+layout/default_style="res://style.tres"
 
 [display]
 

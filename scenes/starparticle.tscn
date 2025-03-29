@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bms4qtudthq8u"]
 
 [ext_resource type="Texture2D" uid="uid://ysc77utyruna" path="res://assets/ui/Star.png" id="1_spyff"]
-[ext_resource type="Script" path="res://scenes/starparticle.gd" id="2_ii85w"]
+[ext_resource type="Script" uid="uid://cjuxg7b1us8fk" path="res://scenes/starparticle.gd" id="2_ii85w"]
 
 [node name="Starparticle" type="CPUParticles2D"]
 emitting = false

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0ipvky1trsib"]
 
-[ext_resource type="Script" path="res://scenes/startbar.gd" id="1_kggbt"]
+[ext_resource type="Script" uid="uid://c0g1rssd0vn3y" path="res://scenes/startbar.gd" id="1_kggbt"]
 [ext_resource type="Texture2D" uid="uid://ysc77utyruna" path="res://assets/ui/Star.png" id="1_kjx1k"]
 [ext_resource type="PackedScene" uid="uid://bms4qtudthq8u" path="res://scenes/starparticle.tscn" id="3_77fb2"]
 

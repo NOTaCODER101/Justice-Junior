@@ -1,17 +1,21 @@
-D:/godot/Godot_v4.3-stable_mono_win64
-C:/Program Files/Eclipse Adoptium/jdk-17.0.14.7-hotspot/bin
+D:/godot/godot4.4/Justice-Junior/apk
+D:/godot/godot4.4/Justice-Junior
+D:/godot/godot4.4
+res://
+res://assets/backgrounds
+res://timelines
 C:/Program Files/Eclipse Adoptium/jdk-17.0.14.7-hotspot
+C:/Program Files/Eclipse Adoptium/jdk-17.0.14.7-hotspot/bin
+D:/godot/Godot_v4.3-stable_mono_win64
+D:/androidsdk
 C:/Java/jdk-21.0.2
 C:/Java/jdk-21.0.2/bin
 D:/androidstudio/jbr
-D:/androidsdk
 D:/androidstudio/jbr/bin
 C:/Program Files/Java/jdk-23/bin
 res://assets/sounds
-res://assets/backgrounds
 res://assets/characters
 res://characters
-res://timelines
 res://scenes
 D:/godot/Godot_v4.3-stable_mono_win64/Justice-Junior
 D:/godot

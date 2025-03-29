@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bxuixulonn6jw"]
 
-[ext_resource type="Script" path="res://scenes/level_selection.gd" id="1_hsvuf"]
+[ext_resource type="Script" uid="uid://cbqa60crkdmoj" path="res://scenes/level_selection.gd" id="1_hsvuf"]
 [ext_resource type="Texture2D" uid="uid://dpje3b1uyt7t7" path="res://assets/backgrounds/level-screen (1).png" id="1_tpija"]
 [ext_resource type="FontFile" uid="uid://clp5qh241e6q8" path="res://assets/fonts/DancingScript-VariableFont_wght.ttf" id="3_8ehjf"]
 [ext_resource type="Texture2D" uid="uid://c0e4v3sy2c2xs" path="res://assets/ui/button.png" id="4_2mruf"]
