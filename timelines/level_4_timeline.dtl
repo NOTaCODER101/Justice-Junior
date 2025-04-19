@@ -1,0 +1,64 @@
+[background arg="res://assets/backgrounds/level4bg1.png" fade="0.0"]
+join Rahul right [animation="Slide In Right" length="1.0"]
+join Meera rightmost [animation="Slide In Right" length="1.0" wait="true"]
+join Kavya left [animation="Slide In Left" length="1.0" wait="true"]
+Rahul: Sorry, Kavya. This is a boys' team. You can’t join.
+Meera: Yeah, it’s not really meant for girls. Maybe you can cheer for us instead?
+Kavya (Sad): But I’m just as good as any of you!
+- I have every right to play! Sports are for everyone.
+	[signal arg="star"]
+	set {stars} += 1.0
+	audio "res://assets/sounds/starnoise.wav"
+	Kavya (Normal): I have every right to play! Sports are for everyone, and being a girl doesn’t change my skills.
+	Rahul: Well… I guess… but—"
+	Meera: Maybe we should ask Mr. Gupta about it?
+	Kavya: That’s exactly what I’m going to do.
+- (Walks away, feeling disheartened.)
+	Kavya (Sad): Fine… whatever.
+	leave Kavya [animation="Slide Out Left" length="1.0"]
+	Rahul: See? It’s just how things are.
+	Meera: Nothing personal, Kavya.
+leave --All-- [animation="Fade Out" wait="true"]
+[background arg="res://assets/backgrounds/level4bg2.png" fade="0.0"]
+join Mr_Gupta right [animation="Fade In" length="1.0" wait="true"]
+join Kavya (Normal) left [animation="Slide In Left" length="1.0" wait="true"]
+Mr_Gupta: Come in, Kavya! What’s on your mind?
+Kavya: I… I wanted to talk about something unfair.
+- Rahul and Meera won’t let me join just because I’m a girl.
+	[signal arg="star"]
+	set {stars} += 1.0
+	audio "res://assets/sounds/starnoise.wav"
+	Mr_Gupta: That’s unacceptable, Kavya. Everyone deserves equal opportunities.
+	Kavya (Happy): So… can something be done?
+	Mr_Gupta: Absolutely. Let’s have a talk with the team.
+- (Stays silent, thinking nothing will change.)
+	Kavya: Never mind… it’s not important.
+	Mr_Gupta: Are you sure? I’m here to help.
+	Kavya: Yeah… it’s okay.
+	leave Kavya [animation="Slide Out Right" length="1.0" wait="true"]
+leave --All-- [animation="Fade Out" wait="true"]
+[background arg="res://assets/backgrounds/level4bg3.png" fade="0.0"]
+join Rahul right [animation="Slide In Right" length="1.0"]
+join Meera rightmost [animation="Slide In Right" length="1.0" wait="true"]
+join Kavya left [animation="Slide In Left" length="1.0" wait="true"]
+join Mr_Gupta leftmost [animation="Slide In Left" length="1.0" wait="true"]
+Mr_Gupta: Sports are for everyone. There is no reason Kavya should be excluded because of her gender.
+Rahul: I guess we never thought about it that way…
+Meera: Yeah, we were just going along with what’s always been done.
+- I’m ready to prove that I belong on this team!
+	[signal arg="star"]
+	set {stars} += 1.0
+	audio "res://assets/sounds/starnoise.wav"
+	Kavya (Happy): Thank you, Mr. Gupta! I’m ready to prove that I belong on this team.
+	Rahul: Alright, let’s see what you’ve got! We could use a strong player.
+	Meera: Welcome to the team, Kavya!"
+- (Stays quiet, still feeling doubtful.)
+	Mr_Gupta: Kavya, would you like to say something?
+	Kavya (Normal): I… I don’t know.
+	Rahul: If you still want to play, we’ll give you a fair shot.
+	Meera: Yeah, you deserve a chance.
+if {stars} > 1.0:
+	Kavya stands her ground, seeks support, and proves that gender does not define ability. The team learns a valuable lesson about equality.
+else:
+	Kavya struggles with self-doubt, missing her chance to change perceptions and stand up for herself.
+[end_timeline]

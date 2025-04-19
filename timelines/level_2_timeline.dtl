@@ -5,23 +5,25 @@ Uncle_Rob: Come here, Lily! Give me a big hug! It's been so long since I last sa
 Lily: Umm...
 - I don’t like this. I’d rather just wave hello.
 	[signal arg="star"]
+	set {stars} += 1.0
 	audio "res://assets/sounds/starnoise.wav"
 	Uncle_Rob: Oh, okay! No problem. A wave is just fine.
 	That’s right, Lily! You can always say no to a touch you don’t like. Your comfort matters.
-	Lily: Thanks, Mom!
+	Lily (Lily Happy): Thanks, Mom!
 - (Stays silent and lets the hug happen.)
 	Uncle_Rob: See? No harm in a hug!
-	Lily: (thinking, feeling uneasy)  But it didn’t feel right… Why didn’t I say something?
+	Lily (Lily Sad): (thinking, feeling uneasy)  But it didn’t feel right… Why didn’t I say something?
 leave Uncle_Rob [animation="Slide Out Left" length="2.0"]
 leave Lily [animation="Slide Out Right" length="2.0" wait="true"]
 [background arg="res://assets/backgrounds/class.png" fade="1.0"]
-join Lily left
+join Lily (Lily Normal) left
 join Mia right
 Mia: Hey, you look kinda upset. What’s wrong?
 update Lily [animation="Tada"]
 Lily: It’s just… something happened yesterday, and I don’t know if I should talk about it.
 - Something happened, and it made me feel weird. I think I should tell Ms. Carter.
 	[signal arg="star"]
+	set {stars} += 1.0
 	audio "res://assets/sounds/starnoise.wav"
 	Mia: That’s a good idea! Ms. Carter is super nice, and she always knows what to do.
 	leave Mia [animation="Slide Out Left" length="2.0"]
@@ -44,6 +46,7 @@ join Ms_Carter right
 Ms_Carter: It’s important to remember that your body belongs to you. If someone touches you in a way that makes you feel uncomfortable, it’s okay to say NO. And you should always tell a trusted adult."
 - I want to share that we can always tell a trusted adult.
 	[signal arg="star"]
+	set {stars} += 1.0
 	audio "res://assets/sounds/starnoise.wav"
 	Lily: Ms. Carter, I think it's important to remember that we can always tell someone we trust if we feel uncomfortable.
 	Ms_Carter: That’s exactly right, Lily! Talking about it helps us stay safe. You are very wise.

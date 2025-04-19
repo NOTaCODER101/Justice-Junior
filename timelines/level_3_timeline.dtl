@@ -1,0 +1,64 @@
+[background arg="res://assets/backgrounds/Factory1.png" fade="0.0"]
+join Factory_Owner right [animation="Slide In Right" length="1.0" wait="true"]
+join Arjun left [animation="Slide In Left" length="1.0"]
+join Neha leftmost [animation="Slide In Left" length="1.0" wait="true"]
+update Factory_Owner [animation="Bounce" length="0.2"]
+Factory_Owner: Hurry up, you two! The work isn’t going to finish itself. If you slack off, you won’t get paid.
+Neha: (whispering)I miss school... I don’t want to do this anymore.
+Arjun: ("Me too, but what can we do?"
+- We should report this to the social worker.
+	[signal arg="star"]
+	set {stars} += 1.0
+	audio "res://assets/sounds/starnoise.wav"
+	Arjun: We can’t stay silent. Let’s find a way to contact someone who can help.
+	Neha: Maybe there’s someone who cares about children like us.
+	(That evening, Arjun secretly writes a note and slips it under the factory door for someone to find.)
+- (Accepts the situation and keeps working.)
+	Factory_Owner: See? Hard work builds character. You kids should be grateful for this job.
+	Arjun (Arjun Sad): This isn’t fair, but what if trying to escape makes things worse?
+	Neha: I wish things were different…
+leave --All-- [animation="Fade Out" wait="true"]
+[background arg="res://assets/backgrounds/Bg2.png" fade="0.0"]
+The next day, a social worker visits the factory after receiving a tip about child labor.
+join Arjun left [animation="Slide In Left" length="1.0"]
+join Neha leftmost [animation="Slide In Left" length="1.0" wait="true"]
+join Social_Worker right [animation="Slide In Right" length="1.0" wait="true"]
+Social_Worker: (concerned) I heard that children are working here instead of going to school. Is that true?
+Neha: What do we do?
+- Tell the truth about our situation.
+	[signal arg="star"]
+	set {stars} += 1.0
+	audio "res://assets/sounds/starnoise.wav"
+	Arjun: Yes, we work here every day. We want to go to school, but we have no choice.
+	Neha: Please help us.
+	Social_Worker: You are both very brave for speaking up. No child should have to work like this. We will take action.
+- Stay silent, fearing consequences.
+	Arjun: No… everything is fine. We work here because we want to.
+	Neha: Yes, we’re fine.
+	Social_Worker: If you ever need help, remember that you can always reach out. You have rights.
+	leave Social_Worker [animation="Slide Out Left" length="1.0" wait="true"]
+leave --All-- [animation="Fade Out" wait="true"]
+[background arg="res://assets/backgrounds/Factory1.png" fade="0.0"]
+join Arjun left [animation="Slide In Left" length="1.0"]
+join Neha leftmost [animation="Slide In Left" length="1.0" wait="true"]
+join Social_Worker right [animation="Slide In Right" length="1.0" wait="true"]
+join Factory_Owner rightmost [animation="Slide In Right" length="1.0" wait="true"]
+Factory_Owner: Who reported this? These kids are just helping their families!
+Social_Worker: Forcing children to work instead of going to school is illegal. They deserve education and a future.
+- Speak up and share their experience.
+	[signal arg="star"]
+	set {stars} += 1.0
+	audio "res://assets/sounds/starnoise.wav"
+	Arjun: We want to go to school, not work in a factory. We deserve a better future.
+	Neha: And now, we can help others understand their rights too!
+	(A campaign is launched to spread awareness about child labor laws, and more children are rescued.)
+- Stay silent, avoiding attention.
+	Factory_Owner: Fine, I’ll let these two go. But others will still need jobs.
+	Neha: What about the other children? Who will help them?
+	(Without awareness, the problem continues for others.)
+	leave Factory_Owner [animation="Slide Out Left" length="1.0" wait="true"]
+if {stars} > 1.0:
+	Arjun and Neha are freed, and awareness about child labor spreads, protecting other children in the future.
+else:
+	Arjun and Neha remain silent, missing their chance for education and allowing the exploitation to continue.
+[end_timeline]

@@ -10,34 +10,34 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Lily Normal",
+&"default_portrait": "Normal",
 &"description": "",
-&"display_name": "Lily",
+&"display_name": "Kavya",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Lily Happy": {
+"Happy": {
 "export_overrides": {
-"image": "\"res://assets/characters/Lily Happy.png\""
+"image": "\"res://assets/characters/Kavya Happy.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 0.7,
 "scene": ""
 },
-"Lily Normal": {
+"Normal": {
 "export_overrides": {
-"image": "\"res://assets/characters/Lily.png\""
+"image": "\"res://assets/characters/Kavya.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 0.7,
 "scene": ""
 },
-"Lily Sad": {
+"Sad": {
 "export_overrides": {
-"image": "\"res://assets/characters/Lily Sad.png\""
+"image": "\"res://assets/characters/kavya Sad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

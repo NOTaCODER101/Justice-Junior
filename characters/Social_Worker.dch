@@ -10,34 +10,16 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Lily Normal",
+&"default_portrait": "Default",
 &"description": "",
-&"display_name": "Lily",
+&"display_name": "Social Worker",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Lily Happy": {
+"Default": {
 "export_overrides": {
-"image": "\"res://assets/characters/Lily Happy.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 0.7,
-"scene": ""
-},
-"Lily Normal": {
-"export_overrides": {
-"image": "\"res://assets/characters/Lily.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 0.7,
-"scene": ""
-},
-"Lily Sad": {
-"export_overrides": {
-"image": "\"res://assets/characters/Lily Sad.png\""
+"image": "\"res://assets/characters/Social Worker.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
