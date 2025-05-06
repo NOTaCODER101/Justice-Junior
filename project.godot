@@ -24,6 +24,7 @@ Globals="*res://globals.gd"
 
 directories/dch_directory={
 "Arjun": "res://characters/Arjun.dch",
+"Ayaan": "res://characters/Ayaan.dch",
 "Emma": "res://characters/Emma.dch",
 "Factory_Owner": "res://characters/Factory_Owner.dch",
 "Jake": "res://characters/Jake.dch",
@@ -34,11 +35,15 @@ directories/dch_directory={
 "Mr_Gupta": "res://characters/Mr_Gupta.dch",
 "Ms_Carter": "res://characters/Ms_Carter.dch",
 "Ms_Garcia": "res://characters/Ms_Garcia.dch",
+"Ms_Nair": "res://characters/Ms_Nair.dch",
 "Neha": "res://characters/Neha.dch",
 "Rahul": "res://characters/Rahul.dch",
+"Rohan": "res://characters/Rohan.dch",
 "Sam": "res://characters/Sam.dch",
 "Social_Worker": "res://characters/Social_Worker.dch",
 "Uncle_Rob": "res://characters/Uncle_Rob.dch",
+"characters/Diya": "res://characters/Diya.dch",
+"fonts/Sam": "res://assets/fonts/Sam.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
@@ -46,6 +51,7 @@ directories/dtl_directory={
 "level_2_timeline": "res://timelines/level_2_timeline.dtl",
 "level_3_timeline": "res://timelines/level_3_timeline.dtl",
 "level_4_timeline": "res://timelines/level_4_timeline.dtl",
+"level_5_timeline": "res://timelines/level_5_timeline.dtl",
 "timelinetest": "res://timelines/timelinetest.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"

@@ -19,7 +19,7 @@ Emma: Umm…
 	Jake: Look, he’s running away!
 	Emma: Guess ‘Silly Sam’ doesn’t want to play!
 	Sam: I wish I could just ignore them…
-leave Jake [animation="Slide Out Left" length="2.0"]
+leave Jake
 leave Emma
 [background arg="res://assets/backgrounds/class.png" fade="2.0"]
 [wait time="2.0"]
@@ -33,10 +33,10 @@ Ms_Garcia: Hi Sam, you look a bit down. What happened?
 	Sam (Sam_happy): Thanks, Ms. Garcia. I just want this to stop.”
 - It’s nothing. I’m okay.
 	Ms_Garcia: You know, Sam, it’s always okay to talk if something’s bothering you.
-	Ms_Garcia: Just remember, I’m here if you need me.
-leave Sam [animation="Fade Out" length="1.0"]
-leave Ms_Garcia [animation="Fade Out" length="1.0" wait="true"]
-join Sam (Sam) left [animation="Fade In" length="1.0"]
+	Sam: Just remember, I’m here if you need me.
+leave Ms_Garcia
+leave Sam
+join Sam left [animation="Fade In" length="1.0"]
 join Ms_Garcia leftmost [animation="Fade In" length="1.0"]
 join Jake right [animation="Fade In" length="1.0"]
 join Emma rightmost [animation="Fade In" length="1.0" wait="true"]
@@ -45,14 +45,14 @@ Ms_Garcia: Alright, class, let’s talk about how what we say can sometimes hurt
 	[signal arg="star"]
 	set {stars} += 1.0
 	audio "res://assets/sounds/starnoise.wav"
-	Sam (Sam): (explains what happened on the playground)
+	Sam: (explains what happened on the playground)
 	Jake: I didn’t mean to make you feel bad, Sam.
 	Emma: Yeah, we thought it was just a joke. Sorry, Sam.
-	Sam: Thanks, guys. It would be nice if we could just be friends.
+	Sam (Sam_happy): Thanks, guys. It would be nice if we could just be friends.
 - I don’t really want to say anything.”
 	Ms_Garcia: That’s okay, Sam. But remember, it’s important to share when you feel ready.
 	Jake: (whispering) Guess he’s too shy to speak up!
-	Sam (Sam_sad): Maybe I am
+	Sam: Maybe I am
 if {stars} > 1.0:
 	Ms_Garcia: I’m proud of you, Sam. You showed a lot of courage today!”
 	Jake: I’m sorry, Sam. Let’s be friends again.
