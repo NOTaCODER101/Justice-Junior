@@ -1,7 +1,10 @@
-HBoxContainer
-Button
-TextureRect
+HSlider
 Label
+HBoxContainer
+Control
+Button
+VBoxContainer
+TextureRect
 AudioStreamPlayer2D
 CPUParticles2D
 Panel
