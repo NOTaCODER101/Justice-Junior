@@ -1,9 +1,10 @@
-HSlider
-Label
-HBoxContainer
-Control
 Button
+Label
+CheckBox
+HSlider
+Control
 VBoxContainer
+HBoxContainer
 TextureRect
 AudioStreamPlayer2D
 CPUParticles2D

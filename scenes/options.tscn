@@ -1,14 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://csaww5gdl5ql3"]
+[gd_scene load_steps=13 format=3 uid="uid://csaww5gdl5ql3"]
 
+[ext_resource type="Script" uid="uid://bkj1gvs0by8js" path="res://scenes/options.gd" id="1_85aq5"]
 [ext_resource type="Texture2D" uid="uid://b522xx1g85oek" path="res://assets/backgrounds/Main Screen_levels.png" id="1_c2u1v"]
+[ext_resource type="Texture2D" uid="uid://qtvmybd71ngi" path="res://assets/ui/main/Ui Box.png" id="2_kv8mn"]
+[ext_resource type="FontFile" uid="uid://rksp24b0juhq" path="res://assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf" id="3_1sggn"]
+[ext_resource type="Texture2D" uid="uid://cgrn13n32bhdx" path="res://assets/ui/main/optionsbutton.png" id="4_e6vpq"]
+[ext_resource type="Texture2D" uid="uid://dep20t3wpjnhm" path="res://assets/ui/main/Button.png" id="5_1sggn"]
+[ext_resource type="Texture2D" uid="uid://bo8eh3phffavf" path="res://assets/ui/main/Close Button.png" id="6_gycth"]
+[ext_resource type="Texture2D" uid="uid://hyeel7c8gvc1" path="res://assets/ui/main/Tick Mark Box.png" id="6_o7i7e"]
+[ext_resource type="Texture2D" uid="uid://becl02iblsu3" path="res://assets/ui/main/Tick Mark.png" id="7_uon5e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6vpq"]
+bg_color = Color(0.856067, 0.856067, 0.856067, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+shadow_color = Color(0, 0, 0, 0.909804)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7i7e"]
+resource_name = "barstyle"
+bg_color = Color(6.73831e-07, 0.992177, 0.477042, 1)
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1sggn"]
+bg_color = Color(0, 0.992157, 0.478431, 1)
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
 
 [node name="Options" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_85aq5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -38,3 +71,521 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_kv8mn")
+
+[node name="Label" type="Label" parent="optionsbg"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -104.0
+offset_top = 29.0
+offset_right = 104.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="optionsbg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Audio" type="Button" parent="optionsbg/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Audio"
+icon = ExtResource("4_e6vpq")
+flat = true
+icon_alignment = 1
+
+[node name="Video" type="Button" parent="optionsbg/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Video"
+icon = ExtResource("4_e6vpq")
+flat = true
+icon_alignment = 1
+
+[node name="Policy" type="Button" parent="optionsbg/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Policy
+"
+icon = ExtResource("4_e6vpq")
+flat = true
+icon_alignment = 1
+
+[node name="CloseButton" type="Button" parent="optionsbg"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = 106.0
+offset_right = -55.0
+offset_bottom = 212.0
+grow_horizontal = 0
+icon = ExtResource("6_gycth")
+flat = true
+expand_icon = true
+
+[node name="audiobg" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kv8mn")
+
+[node name="Label" type="Label" parent="audiobg"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -104.0
+offset_top = 29.0
+offset_right = 104.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Audio"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="audiobg"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -238.0
+offset_right = 20.0
+offset_bottom = -198.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sound" type="Control" parent="audiobg/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="audiobg/VBoxContainer/Sound"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -35.5
+offset_right = -172.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Sound"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="audiobg/VBoxContainer/Sound"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -45.0
+offset_right = 393.0
+offset_bottom = 46.0
+theme_override_icons/grabber = ExtResource("5_1sggn")
+theme_override_icons/grabber_highlight = ExtResource("5_1sggn")
+theme_override_styles/slider = SubResource("StyleBoxFlat_e6vpq")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_o7i7e")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_1sggn")
+value = 50.0
+
+[node name="Music" type="Control" parent="audiobg/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="audiobg/VBoxContainer/Music"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = 87.5
+offset_right = -172.0
+offset_bottom = 158.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="audiobg/VBoxContainer/Music"]
+offset_left = -64.0
+offset_top = 78.0
+offset_right = 393.0
+offset_bottom = 169.0
+theme_override_icons/grabber = ExtResource("5_1sggn")
+theme_override_icons/grabber_highlight = ExtResource("5_1sggn")
+theme_override_styles/slider = SubResource("StyleBoxFlat_e6vpq")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_o7i7e")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_1sggn")
+value = 50.0
+
+[node name="SFX" type="Control" parent="audiobg/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="audiobg/VBoxContainer/SFX"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = 203.5
+offset_right = -172.0
+offset_bottom = 274.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="audiobg/VBoxContainer/SFX"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 207.0
+offset_right = 66.0
+offset_bottom = 266.0
+theme_override_icons/checked = ExtResource("7_uon5e")
+theme_override_icons/unchecked = ExtResource("6_o7i7e")
+flat = true
+alignment = 1
+icon_alignment = 1
+
+[node name="CloseButton" type="Button" parent="audiobg"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = 106.0
+offset_right = -55.0
+offset_bottom = 212.0
+grow_horizontal = 0
+icon = ExtResource("6_gycth")
+flat = true
+expand_icon = true
+
+[node name="videobg" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kv8mn")
+
+[node name="Label" type="Label" parent="videobg"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -104.0
+offset_top = 29.0
+offset_right = 104.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Video"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="videobg"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -238.0
+offset_right = 20.0
+offset_bottom = -198.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Animations" type="Control" parent="videobg/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="videobg/VBoxContainer/Animations"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -332.5
+offset_top = -33.0
+offset_right = -27.5
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Animations"
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="videobg/VBoxContainer/Animations"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 181.5
+offset_top = -25.0
+offset_right = 246.5
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_icons/checked = ExtResource("7_uon5e")
+theme_override_icons/unchecked = ExtResource("6_o7i7e")
+flat = true
+alignment = 1
+icon_alignment = 1
+
+[node name="Vibration" type="Control" parent="videobg/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="videobg/VBoxContainer/Vibration"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -332.5
+offset_top = 85.0
+offset_right = -27.5
+offset_bottom = 156.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Vibrations"
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="videobg/VBoxContainer/Vibration"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 181.5
+offset_top = 93.0
+offset_right = 246.5
+offset_bottom = 152.0
+grow_horizontal = 2
+theme_override_icons/checked = ExtResource("7_uon5e")
+theme_override_icons/unchecked = ExtResource("6_o7i7e")
+text = "
+"
+flat = true
+alignment = 1
+icon_alignment = 1
+
+[node name="Effects" type="Control" parent="videobg/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="videobg/VBoxContainer/Effects"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -332.5
+offset_top = 201.0
+offset_right = -27.5
+offset_bottom = 272.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Effects"
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="videobg/VBoxContainer/Effects"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 181.5
+offset_top = 209.0
+offset_right = 246.5
+offset_bottom = 268.0
+grow_horizontal = 2
+theme_override_icons/checked = ExtResource("7_uon5e")
+theme_override_icons/unchecked = ExtResource("6_o7i7e")
+text = "
+"
+flat = true
+alignment = 1
+icon_alignment = 1
+
+[node name="Effects2" type="Control" parent="videobg/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="videobg/VBoxContainer/Effects2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -331.0
+offset_top = 308.0
+offset_right = 23.0
+offset_bottom = 379.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Battery Saver"
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="videobg/VBoxContainer/Effects2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 181.5
+offset_top = 316.0
+offset_right = 246.5
+offset_bottom = 375.0
+grow_horizontal = 2
+theme_override_icons/checked = ExtResource("7_uon5e")
+theme_override_icons/unchecked = ExtResource("6_o7i7e")
+text = "
+"
+flat = true
+alignment = 1
+icon_alignment = 1
+
+[node name="CloseButton" type="Button" parent="videobg"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = 106.0
+offset_right = -55.0
+offset_bottom = 212.0
+grow_horizontal = 0
+icon = ExtResource("6_gycth")
+flat = true
+expand_icon = true
+
+[node name="policybg" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -476.5
+offset_right = 430.0
+offset_bottom = 476.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kv8mn")
+
+[node name="Label" type="Label" parent="policybg"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -104.0
+offset_top = 29.0
+offset_right = 104.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1sggn")
+theme_override_font_sizes/font_size = 60
+text = "Policy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Policy" type="Label" parent="policybg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Policy"
+
+[node name="CloseButton" type="Button" parent="policybg"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = 106.0
+offset_right = -55.0
+offset_bottom = 212.0
+grow_horizontal = 0
+icon = ExtResource("6_gycth")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="optionsbg/VBoxContainer/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="optionsbg/VBoxContainer/Video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="optionsbg/VBoxContainer/Policy" to="." method="_on_policy_pressed"]
+[connection signal="pressed" from="optionsbg/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="audiobg/CloseButton" to="." method="_on_audio_close_button_pressed"]
+[connection signal="pressed" from="videobg/CloseButton" to="." method="_on_video_close_button_pressed"]
+[connection signal="pressed" from="policybg/CloseButton" to="." method="_on_policy_close_button_pressed"]
