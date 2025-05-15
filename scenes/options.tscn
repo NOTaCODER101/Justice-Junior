@@ -252,6 +252,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HSlider" type="HSlider" parent="audiobg/VBoxContainer/Music"]
+layout_mode = 0
 offset_left = -64.0
 offset_top = 78.0
 offset_right = 393.0

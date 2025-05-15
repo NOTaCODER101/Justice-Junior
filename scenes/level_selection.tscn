@@ -93,3 +93,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="button_down" from="HBoxContainer/level_2" to="." method="_on_level_2_button_down"]
 [connection signal="button_down" from="HBoxContainer/level_3" to="." method="_on_level_3_button_down"]
 [connection signal="button_down" from="HBoxContainer/level_4" to="." method="_on_level_4_button_down"]
+[connection signal="button_down" from="HBoxContainer/level_5" to="." method="_on_level_5_button_down"]
