@@ -6,12 +6,21 @@ func _ready() -> void:
 	Dialogic.start("level_4_timeline")
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		$CanvasLayer/PauseMenu.visible=!$CanvasLayer/PauseMenu.visible
+		get_tree().paused=!get_tree().paused
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void: 
+	
 	pass
 
 
 func _on_timeline_ended():
-	print("ended")
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	$CanvasLayer/Victorymenu.visible=true
+	pass
+func restart():
+	Dialogic.clear()
+	if get_tree():
+		get_tree().reload_current_scene()

@@ -20,8 +20,14 @@ func _on_resume_button_down() -> void:
 
 
 func _on_exit_button_down() -> void:
+	self.visible=false
+	get_tree().paused=false
+	Dialogic.clear()
+	Dialogic.end_timeline()
 	get_tree().change_scene_to_file("res://scenes/level_selection.tscn")
 
 
 func _on_retry_button_down() -> void:
+	self.visible=false
+	get_tree().paused=false
 	$"../..".restart()

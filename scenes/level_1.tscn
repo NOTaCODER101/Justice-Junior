@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://chyuxv88ad56i"]
+[gd_scene load_steps=7 format=3 uid="uid://chyuxv88ad56i"]
 
 [ext_resource type="Script" uid="uid://dyrpua0pnwx03" path="res://scenes/level_1.gd" id="1_a274j"]
+[ext_resource type="PackedScene" uid="uid://cvpbe5nxsrqd0" path="res://scenes/victory.tscn" id="2_4nkto"]
 [ext_resource type="PackedScene" uid="uid://c0ipvky1trsib" path="res://scenes/startbar.tscn" id="2_aedg5"]
+[ext_resource type="PackedScene" uid="uid://fh8sblju6dv7" path="res://scenes/level_2.tscn" id="3_fcfvj"]
 [ext_resource type="AudioStream" uid="uid://cspcscspbg8fo" path="res://assets/sounds/Background Music for Visual Novels vol.1/acoustic chill.mp3" id="3_mtvdo"]
 [ext_resource type="PackedScene" uid="uid://daikfur5ftoya" path="res://scenes/pause_menu.tscn" id="4_5xbjy"]
 
@@ -9,13 +11,12 @@
 process_mode = 3
 script = ExtResource("1_a274j")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_mtvdo")
-autoplay = true
-parameters/looping = true
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5
+
+[node name="Victorymenu" parent="CanvasLayer" instance=ExtResource("2_4nkto")]
+visible = false
+nextlevel = ExtResource("3_fcfvj")
 
 [node name="startbar" parent="CanvasLayer" instance=ExtResource("2_aedg5")]
 offset_right = -1500.0
@@ -26,3 +27,8 @@ visible = false
 current_level = "res://scenes/level_1.tscn"
 current_timeline = "level_1_timeline"
 next_level = "res://scenes/level_2.tscn"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CanvasLayer"]
+stream = ExtResource("3_mtvdo")
+autoplay = true
+parameters/looping = true

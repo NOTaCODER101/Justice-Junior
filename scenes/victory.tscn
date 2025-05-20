@@ -1,0 +1,126 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvpbe5nxsrqd0"]
+
+[ext_resource type="Script" uid="uid://cqw3f2y7ho4wb" path="res://scenes/victory.gd" id="1_5hn41"]
+[ext_resource type="Texture2D" uid="uid://dy8mul266sed1" path="res://assets/ui/main/Ui Box2.png" id="2_eaoty"]
+[ext_resource type="Texture2D" uid="uid://bo8eh3phffavf" path="res://assets/ui/main/Close Button.png" id="3_n2k88"]
+[ext_resource type="Texture2D" uid="uid://dhsab6nvicidf" path="res://assets/ui/main/Next Button.png" id="5_eaoty"]
+[ext_resource type="FontFile" uid="uid://rksp24b0juhq" path="res://assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf" id="6_04qlw"]
+[ext_resource type="Texture2D" uid="uid://biq12ly8qxpkp" path="res://assets/ui/main/Retry Button.png" id="6_m35g4"]
+
+[node name="Victorymenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5hn41")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.709804)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -298.0
+offset_top = -266.5
+offset_right = 298.0
+offset_bottom = 266.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_eaoty")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Exit" type="Button" parent="TextureRect/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = 88.5
+offset_right = -120.0
+offset_bottom = 197.5
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("3_n2k88")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Retry" type="Button" parent="TextureRect/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = 88.5
+offset_right = 54.0
+offset_bottom = 197.5
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("6_m35g4")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Next" type="Button" parent="TextureRect/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 115.0
+offset_top = 88.5
+offset_right = 224.0
+offset_bottom = 197.5
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("5_eaoty")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="TextureRect/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_04qlw")
+theme_override_font_sizes/font_size = 80
+text = "Victory!"
+
+[connection signal="button_down" from="TextureRect/Control/Exit" to="." method="_on_exit_button_down"]
+[connection signal="button_down" from="TextureRect/Control/Retry" to="." method="_on_retry_button_down"]
+[connection signal="button_down" from="TextureRect/Control/Next" to="." method="_on_next_button_down"]

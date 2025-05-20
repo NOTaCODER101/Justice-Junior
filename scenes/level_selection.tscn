@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c0e4v3sy2c2xs" path="res://assets/ui/button.png" id="4_2mruf"]
 
 [node name="level_selection" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
