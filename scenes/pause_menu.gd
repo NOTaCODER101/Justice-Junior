@@ -31,3 +31,12 @@ func _on_retry_button_down() -> void:
 	self.visible=false
 	get_tree().paused=false
 	$"../..".restart()
+
+
+
+func _on_options_close_button_down() -> void:
+	$Options.visible=false
+
+
+func _on_settings_button_down() -> void:
+	$Options.visible=true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://daikfur5ftoya"]
+[gd_scene load_steps=10 format=3 uid="uid://daikfur5ftoya"]
 
 [ext_resource type="Script" uid="uid://bix5vmavjaf71" path="res://scenes/pause_menu.gd" id="1_1s2dm"]
 [ext_resource type="Texture2D" uid="uid://dy8mul266sed1" path="res://assets/ui/main/Ui Box2.png" id="1_myx47"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bufbxm1fvh7lp" path="res://assets/ui/main/Back Button.png" id="5_knqa7"]
 [ext_resource type="Texture2D" uid="uid://biq12ly8qxpkp" path="res://assets/ui/main/Retry Button.png" id="6_71k7c"]
 [ext_resource type="Texture2D" uid="uid://dusdtusb07snp" path="res://assets/ui/main/Setting Button.png" id="7_cmnsq"]
+[ext_resource type="PackedScene" uid="uid://csaww5gdl5ql3" path="res://scenes/options.tscn" id="8_88e76"]
+[ext_resource type="Texture2D" uid="uid://bo8eh3phffavf" path="res://assets/ui/main/Close Button.png" id="9_knqa7"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -139,6 +141,41 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="Options" parent="." instance=ExtResource("8_88e76")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 0.0
+offset_right = 0.0
+
+[node name="TextureRect" parent="Options" index="0"]
+visible = false
+
+[node name="CloseButton" parent="Options/optionsbg" index="2"]
+visible = false
+
+[node name="OptionsClose" type="Button" parent="Options/optionsbg" index="3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -182.0
+offset_top = 132.0
+offset_right = -75.0
+offset_bottom = 239.0
+grow_horizontal = 0
+icon = ExtResource("9_knqa7")
+flat = true
+expand_icon = true
+
 [connection signal="button_down" from="TextureRect/Control/Resume" to="." method="_on_resume_button_down"]
 [connection signal="button_down" from="TextureRect/Control/Exit" to="." method="_on_exit_button_down"]
 [connection signal="button_down" from="TextureRect/Control/Retry" to="." method="_on_retry_button_down"]
+[connection signal="button_down" from="TextureRect/Control/Settings" to="." method="_on_settings_button_down"]
+[connection signal="button_down" from="Options/optionsbg/OptionsClose" to="." method="_on_options_close_button_down"]
+
+[editable path="Options"]
