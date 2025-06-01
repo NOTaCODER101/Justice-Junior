@@ -14,3 +14,11 @@ func _process(delta: float) -> void:
 
 func _on_next_button_down() -> void:
 	get_tree().change_scene_to_packed(nextlevel)
+
+
+func _on_exit_button_down() -> void:
+	get_tree().change_scene_to_file("res://scenes/level_selection.tscn")
+
+
+func _on_retry_button_down() -> void:
+	$"../../".restart()

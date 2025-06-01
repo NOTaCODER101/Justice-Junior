@@ -18,8 +18,20 @@ func _process(delta: float) -> void:
 
 
 func _on_timeline_ended():
+	savegame()
 	$CanvasLayer/Victorymenu.visible=true
 	pass
+
+func savegame():
+	var savedata=SaveData.new()
+	var stars=$CanvasLayer/startbar.current_stars
+	if savedata.saveexists():
+		savedata.starslist=savedata.loaddat()
+	savedata.updateStars(4,stars)
+	savedata.savedat()
+	
+
+
 func restart():
 	Dialogic.clear()
 	if get_tree():

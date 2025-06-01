@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckug3g16wqohj"]
+
+[ext_resource type="Script" uid="uid://0vcehisi10fo" path="res://scenes/levelselectionstars.gd" id="1_dxmat"]
+[ext_resource type="Texture2D" uid="uid://ysc77utyruna" path="res://assets/ui/Star.png" id="4_4t5u5"]
+
+[node name="levelselectionstars" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dxmat")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 18.0
+offset_top = 200.0
+offset_right = 272.0
+offset_bottom = 282.0
+metadata/_edit_group_ = true
+
+[node name="star1" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_4t5u5")
+
+[node name="star2" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_4t5u5")
+
+[node name="star3" type="TextureRect" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_4t5u5")

@@ -1,8 +1,8 @@
 Button
+HBoxContainer
 Label
 ColorRect
 TextureRect
-HBoxContainer
 Control
 CheckBox
 HSlider

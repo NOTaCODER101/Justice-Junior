@@ -1,5 +1,6 @@
 extends Node2D
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_tree().paused=false
@@ -17,8 +18,20 @@ func _process(delta: float) -> void:
 
 
 func _on_timeline_ended():
+	savegame()
 	$CanvasLayer/Victorymenu.visible=true;
 	pass
+
+func savegame():
+	var savedata=SaveData.new()
+	var stars=$CanvasLayer/startbar.current_stars
+	if savedata.saveexists():
+		savedata.starslist=savedata.loaddat()
+	savedata.updateStars(1,stars)
+	savedata.savedat()
+	print("datasaved")
+		
+
 func restart():
 	Dialogic.clear()
 	if get_tree():
