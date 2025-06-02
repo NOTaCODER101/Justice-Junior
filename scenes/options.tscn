@@ -226,7 +226,9 @@ theme_override_icons/grabber_highlight = ExtResource("5_1sggn")
 theme_override_styles/slider = SubResource("StyleBoxFlat_e6vpq")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_o7i7e")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_1sggn")
-value = 50.0
+max_value = 1.0
+step = 0.1
+value = 1.0
 
 [node name="Music" type="Control" parent="audiobg/VBoxContainer"]
 layout_mode = 2
@@ -262,7 +264,9 @@ theme_override_icons/grabber_highlight = ExtResource("5_1sggn")
 theme_override_styles/slider = SubResource("StyleBoxFlat_e6vpq")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_o7i7e")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_1sggn")
-value = 50.0
+max_value = 1.0
+step = 0.1
+value = 1.0
 
 [node name="SFX" type="Control" parent="audiobg/VBoxContainer"]
 layout_mode = 2
@@ -295,6 +299,7 @@ offset_right = 66.0
 offset_bottom = 266.0
 theme_override_icons/checked = ExtResource("7_uon5e")
 theme_override_icons/unchecked = ExtResource("6_o7i7e")
+button_pressed = true
 flat = true
 alignment = 1
 icon_alignment = 1
@@ -587,6 +592,9 @@ expand_icon = true
 [connection signal="pressed" from="optionsbg/VBoxContainer/Video" to="." method="_on_video_pressed"]
 [connection signal="pressed" from="optionsbg/VBoxContainer/Policy" to="." method="_on_policy_pressed"]
 [connection signal="pressed" from="optionsbg/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="drag_ended" from="audiobg/VBoxContainer/Sound/HSlider" to="." method="_on_sound_h_slider_drag_ended"]
+[connection signal="drag_ended" from="audiobg/VBoxContainer/Music/HSlider" to="." method="_on_music_h_slider_drag_ended"]
+[connection signal="toggled" from="audiobg/VBoxContainer/SFX/CheckBox" to="." method="_on_sfx_check_box_toggled"]
 [connection signal="pressed" from="audiobg/CloseButton" to="." method="_on_audio_close_button_pressed"]
 [connection signal="pressed" from="videobg/CloseButton" to="." method="_on_video_close_button_pressed"]
 [connection signal="pressed" from="policybg/CloseButton" to="." method="_on_policy_close_button_pressed"]

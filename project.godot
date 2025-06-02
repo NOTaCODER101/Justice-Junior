@@ -15,6 +15,10 @@ run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://dnwaj37lwowjk"
+
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
@@ -75,13 +79,13 @@ save/encryption_on_exports_only=true
 text/autopauses={}
 audio/channel_defaults={
 "": {
-"audio_bus": "",
+"audio_bus": "Sound",
 "fade_length": 0.0,
 "loop": false,
 "volume": 0.0
 },
 "music": {
-"audio_bus": "",
+"audio_bus": "Sound",
 "fade_length": 0.0,
 "loop": true,
 "volume": 0.0
@@ -93,6 +97,7 @@ variables={
 glossary/default_case_sensitive=true
 layout/style_list=["res://style.tres"]
 layout/default_style="res://style.tres"
+audio/type_sound_bus="Sound"
 
 [display]
 

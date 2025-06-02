@@ -29,7 +29,7 @@ func savegame():
 		savedata.starslist=savedata.loaddat()
 	savedata.updateStars(1,stars)
 	savedata.savedat()
-	print("datasaved")
+	
 		
 
 func restart():

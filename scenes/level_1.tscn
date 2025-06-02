@@ -31,4 +31,5 @@ next_level = "res://scenes/level_2.tscn"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CanvasLayer"]
 stream = ExtResource("3_mtvdo")
 autoplay = true
+bus = &"Music"
 parameters/looping = true
