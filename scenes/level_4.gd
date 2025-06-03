@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 
 func _on_timeline_ended():
 	savegame()
+	$CanvasLayer/startbar.visible=false
 	$CanvasLayer/Victorymenu.visible=true
 	pass
 

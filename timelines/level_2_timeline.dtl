@@ -55,3 +55,8 @@ Ms_Carter: It’s important to remember that your body belongs to you. If someon
 - (Stays quiet, looking down at her desk.)
 	Ms_Carter: Even if you don’t want to speak now, remember that your feelings matter. If something ever feels wrong, you have the right to say no and tell someone you trust.
 	Lily: I wish I could say something… but what if people don’t understand?
+if {stars} > 1.0:
+	Lily understands that she can say no, trust her feelings, and tell a trusted adult when something feels wrong. She feels empowered and safe.
+else:
+	Lily keeps her feelings inside, leaving her confused and worried, unsure of how to handle uncomfortable situations in the future.
+[end_timeline]

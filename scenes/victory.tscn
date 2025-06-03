@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvpbe5nxsrqd0"]
+[gd_scene load_steps=8 format=3 uid="uid://cvpbe5nxsrqd0"]
 
 [ext_resource type="Script" uid="uid://cqw3f2y7ho4wb" path="res://scenes/victory.gd" id="1_5hn41"]
 [ext_resource type="Texture2D" uid="uid://dy8mul266sed1" path="res://assets/ui/main/Ui Box2.png" id="2_eaoty"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dhsab6nvicidf" path="res://assets/ui/main/Next Button.png" id="5_eaoty"]
 [ext_resource type="FontFile" uid="uid://rksp24b0juhq" path="res://assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf" id="6_04qlw"]
 [ext_resource type="Texture2D" uid="uid://biq12ly8qxpkp" path="res://assets/ui/main/Retry Button.png" id="6_m35g4"]
+[ext_resource type="PackedScene" uid="uid://c0ipvky1trsib" path="res://scenes/startbar.tscn" id="7_n2k88"]
 
 [node name="Victorymenu" type="Control"]
 layout_mode = 3
@@ -120,6 +121,18 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_04qlw")
 theme_override_font_sizes/font_size = 80
 text = "Victory!"
+
+[node name="startbar" parent="TextureRect" instance=ExtResource("7_n2k88")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 115.0
+offset_top = 45.0
+offset_right = 115.0
+offset_bottom = 45.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="button_down" from="TextureRect/Control/Exit" to="." method="_on_exit_button_down"]
 [connection signal="button_down" from="TextureRect/Control/Retry" to="." method="_on_retry_button_down"]

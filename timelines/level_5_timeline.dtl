@@ -1,18 +1,18 @@
 [background arg="res://assets/backgrounds/Scene 1.png" fade="0.0"]
 join Ayaan right [animation="Slide In Right" length="1.0"]
 join characters/Diya rightmost [animation="Slide In Right" length="1.0" wait="true"]
-join Rohan left
-join Ms_Nair leftmost [animation="Slide In Left" length="1.0" wait="true"]
+join Ms_Nair leftmost [animation="Slide In Left" length="1.0"]
+join Rohan left [animation="Slide In Left" length="1.0" wait="true"]
 Ms_Nair: Good morning, everyone! This Friday, we’ll be celebrating our annual School Culture Festival! Each class will prepare dances, decorations, and food representing a local tradition.
 Rohan: Let’s do the same celebration we did last year—it was so fun!
 characters/Diya: What about something new that includes everyone’s background?
 Rohan: Come on, Ayaan never joins anyway. He doesn’t even celebrate the same things as us.
-Ayaan: I feel left out... but maybe this year, I should say something.
+Ayaan (Normal): I feel left out... but maybe this year, I should say something.
 - Speak up and share your cultural tradition with the class.
 	[signal arg="star"]
 	set {stars} += 1.0
 	audio "res://assets/sounds/starnoise.wav"
-	Ayaan (Normal): I’d like to contribute. My family celebrates a different festival around this time. Maybe I could show what we do?
+	Ayaan (Happy): I’d like to contribute. My family celebrates a different festival around this time. Maybe I could show what we do?
 	Ms_Nair: That’s a wonderful idea, Ayaan! Let’s learn from each other.
 	characters/Diya: I’d love to try your food and learn about your festival!
 - Stay quiet and pretend you’re okay with being left out.
@@ -22,10 +22,10 @@ Ayaan: I feel left out... but maybe this year, I should say something.
 	Ayaan (Sad): I wish I could be honest… but what if they don’t understand?
 leave --All-- [animation="Fade Out" wait="true"]
 [background arg="res://assets/backgrounds/Scene 2.png" fade="0.0"]
-join Ayaan left [animation="Fade In" length="1.0" wait="true"]
-join characters/Diya (Normal) leftmost [animation="Slide In Left" length="1.0" wait="true"]
-join Rohan (Normal) right [animation="Slide In Left" length="1.0" wait="true"]
 join Ms_Nair center
+join Ayaan (Normal) left [animation="Fade In" length="1.0" wait="true"]
+join characters/Diya (Normal) leftmost [animation="Slide In Left" length="1.0" wait="true"]
+join Rohan (Normal) right [animation="Slide In Right" length="1.0" wait="true"]
 characters/Diya: We should include everyone’s traditions. Ayaan, what do you usually do during your festival?
 Ayaan: Well… we decorate with lamps, cook special dishes, and sing prayers.
 Rohan: Sounds boring. Our celebration has music and dancing!
@@ -34,14 +34,14 @@ Ms_Nair: That’s enough, Rohan. Every tradition has value. Ayaan has a right to
 	[signal arg="star"]
 	set {stars} += 1.0
 	audio "res://assets/sounds/starnoise.wav"
-	Ayaan: We can decorate a corner with lamps and I can bring some sweets my mother makes. Maybe I can sing a song too?
+	Ayaan (Happy): We can decorate a corner with lamps and I can bring some sweets my mother makes. Maybe I can sing a song too?
 	Ms_Nair: That’s a beautiful idea, Ayaan. Your voice will make the celebration even more special!
 	Rohan: Okay… maybe it could be cool to see something new.
 - Back away and say you’ll just watch.
-	Ayaan: I don’t think it matters. You all enjoy your own celebration.
+	Ayaan (Sad): I don’t think it matters. You all enjoy your own celebration.
 	characters/Diya: But we want to learn about your culture too!
 	Ms_Nair: Ayaan, your voice matters. It’s okay to be proud of your roots.
-	Ayaan: Why is it so hard to speak up…?
+	Ayaan (Sad): Why is it so hard to speak up…?
 leave --All-- [animation="Fade Out" wait="true"]
 [background arg="res://assets/backgrounds/Scene 3.png" fade="0.0"]
 join Ayaan right [animation="Slide In Right" length="1.0"]
@@ -56,13 +56,12 @@ Ms_Nair: Today’s celebration is a true success—not because we all did the sa
 	audio "res://assets/sounds/starnoise.wav"
 	Ayaan (Happy): Thank you for listening. I was scared at first, but now I see that sharing makes us stronger."\
 	\
-	
 	characters/Diya: You taught us so much, Ayaan
 	Rohan: Okay… your sweets were pretty awesome.
 - Stay quiet and avoid attention.
 	Ayaan: I’m glad others are happy… even if I didn’t show much."
 	Ms_Nair (Normal): Ayaan, your culture is part of our community. I hope next time you’ll share more—it matters.
-	Ayaan: Maybe… next time.
+	Ayaan (Sad): Maybe… next time.
 	Meera: Yeah, you deserve a chance.
 if {stars} > 1.0:
 	Ayaan gains confidence, feels respected, and the school becomes a more inclusive space. Students understand the true meaning of freedom of religion.
