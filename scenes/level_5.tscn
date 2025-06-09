@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdyroxgr83ilr"]
+[gd_scene load_steps=9 format=3 uid="uid://cdyroxgr83ilr"]
 
 [ext_resource type="Script" uid="uid://cbpvius28a5en" path="res://scenes/level_5.gd" id="1_e224s"]
+[ext_resource type="Texture2D" uid="uid://dkx1bvojbl0bj" path="res://assets/backgrounds/Scene 3.png" id="2_ij176"]
 [ext_resource type="PackedScene" uid="uid://c0ipvky1trsib" path="res://scenes/startbar.tscn" id="2_wcwf6"]
 [ext_resource type="AudioStream" uid="uid://cspcscspbg8fo" path="res://assets/sounds/Background Music for Visual Novels vol.1/acoustic chill.mp3" id="3_tbt7t"]
+[ext_resource type="Texture2D" uid="uid://cvf5lqo4pw1mo" path="res://assets/ui/main/Pause Touch Button.png" id="3_uva14"]
 [ext_resource type="PackedScene" uid="uid://daikfur5ftoya" path="res://scenes/pause_menu.tscn" id="3_wcwf6"]
 [ext_resource type="PackedScene" uid="uid://cvpbe5nxsrqd0" path="res://scenes/victory.tscn" id="4_cynta"]
 [ext_resource type="PackedScene" uid="uid://b1vdsml41hjld" path="res://scenes/main_menu.tscn" id="5_ak5vt"]
@@ -13,6 +15,30 @@ script = ExtResource("1_e224s")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5
+
+[node name="BG" type="TextureRect" parent="CanvasLayer"]
+visible = false
+z_index = -5
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ij176")
+
+[node name="PauseButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -117.0
+offset_top = 21.0
+offset_right = -31.0
+offset_bottom = 109.0
+grow_horizontal = 0
+icon = ExtResource("3_uva14")
+flat = true
+expand_icon = true
 
 [node name="startbar" parent="CanvasLayer" instance=ExtResource("2_wcwf6")]
 offset_right = -1500.0
@@ -33,3 +59,5 @@ stream = ExtResource("3_tbt7t")
 autoplay = true
 bus = &"Music"
 parameters/looping = true
+
+[connection signal="button_down" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_button_down"]

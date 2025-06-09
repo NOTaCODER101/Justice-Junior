@@ -54,9 +54,8 @@ Ms_Nair: Today’s celebration is a true success—not because we all did the sa
 	[signal arg="star"]
 	set {stars} += 1.0
 	audio "res://assets/sounds/starnoise.wav"
-	Ayaan (Happy): Thank you for listening. I was scared at first, but now I see that sharing makes us stronger."\
-	\
-	characters/Diya: You taught us so much, Ayaan
+	Ayaan (Happy): Thank you for listening. I was scared at first, but now I see that sharing makes us stronger.
+	characters/Diya:  You taught us so much, Ayaan
 	Rohan: Okay… your sweets were pretty awesome.
 - Stay quiet and avoid attention.
 	Ayaan: I’m glad others are happy… even if I didn’t show much."

@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 
 func _on_timeline_ended():
 	savegame()
+	$CanvasLayer/BG.visible=true
 	$CanvasLayer/startbar.visible=false
 	$CanvasLayer/Victorymenu.visible=true;
 	pass
@@ -35,3 +36,8 @@ func restart():
 	Dialogic.clear()
 	if get_tree():
 		get_tree().reload_current_scene()
+
+
+func _on_pause_button_button_down() -> void:
+	$CanvasLayer/PauseMenu.visible=!$CanvasLayer/PauseMenu.visible
+	get_tree().paused=!get_tree().paused
