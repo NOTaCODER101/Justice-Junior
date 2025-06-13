@@ -26,6 +26,7 @@ func _on_timeline_ended():
 func savegame():
 	var savedata=SaveData.new()
 	var stars=$CanvasLayer/startbar.current_stars
+	$CanvasLayer/Victorymenu.updateEndText(5,stars)
 	if savedata.saveexists():
 		savedata.starslist=savedata.loaddat()
 	savedata.updateStars(5,stars)
