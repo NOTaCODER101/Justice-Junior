@@ -2,6 +2,7 @@ extends Control
 
 @export var level:int
 var stars:int=0
+var locked=false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	loadgame()
@@ -11,7 +12,11 @@ func loadgame():
 	if savedata.saveexists():
 		savedata.starslist=savedata.loaddat()
 	stars=savedata.starslist[level-1]
-	displaystars(stars)
+	if stars==-1:
+		$lock.visible=true
+		locked=true
+	else:
+		displaystars(stars)
 	
 
 func displaystars(stars):

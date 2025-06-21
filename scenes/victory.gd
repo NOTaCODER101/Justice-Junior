@@ -40,25 +40,37 @@ func updateEndText(level,stars):
 	if level==1:
 		if stars<3:
 			$TextureRect/Control/endtext.text=endtextcontent[0]
+			if stars<=1:
+				$TextureRect/Control/Victory.text="Failed"
 		else :
 			$TextureRect/Control/endtext.text=endtextcontent[1]
+			
 	elif level==2:
 		if stars<3:
 			$TextureRect/Control/endtext.text=endtextcontent[2]
+			if stars<=1:
+				$TextureRect/Control/Victory.text="Failed"
 		else :
 			$TextureRect/Control/endtext.text=endtextcontent[3]
+			
 	elif level==3:
 		if stars<3:
 			$TextureRect/Control/endtext.text=endtextcontent[4]
+			if stars<=1:
+				$TextureRect/Control/Victory.text="Failed"
 		else :
 			$TextureRect/Control/endtext.text=endtextcontent[5]
 	elif level==4:
 		if stars<3:
 			$TextureRect/Control/endtext.text=endtextcontent[6]
+			if stars<=1:
+				$TextureRect/Control/Victory.text="Failed"
 		else :
 			$TextureRect/Control/endtext.text=endtextcontent[7]
 	else:
 		if stars<3:
 			$TextureRect/Control/endtext.text=endtextcontent[8]
+			if stars<=1:
+				$TextureRect/Control/Victory.text="Failed"
 		else :
 			$TextureRect/Control/endtext.text=endtextcontent[9]

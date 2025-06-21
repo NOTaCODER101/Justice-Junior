@@ -30,6 +30,8 @@ func savegame():
 	if savedata.saveexists():
 		savedata.starslist=savedata.loaddat()
 	savedata.updateStars(3,stars)
+	if stars>1:
+		savedata.updateStars(4,0)
 	savedata.savedat()
 	
 

@@ -1,9 +1,9 @@
-Label
 TextureRect
+Control
+Label
 Button
 HBoxContainer
 ColorRect
-Control
 CheckBox
 HSlider
 VBoxContainer

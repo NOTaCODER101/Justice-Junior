@@ -4,7 +4,7 @@ class_name SaveData
 
 var path:String="user://SaveData.txt"
 
-var starslist=[0,0,0,0,0]
+var starslist=[0,-1,-1,-1,-1]
 
 
 func savedat():
@@ -25,4 +25,5 @@ func updateStars(level,stars):
 
 func  resetStars():
 	for i in len(starslist):
-		starslist[i]=0
+		starslist[i]=-1
+	starslist[0]=0
