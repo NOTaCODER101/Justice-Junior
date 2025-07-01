@@ -50,10 +50,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -997.0
-offset_top = -553.0
-offset_right = 984.0
-offset_bottom = 565.0
+offset_left = -990.5
+offset_top = -559.0
+offset_right = 990.5
+offset_bottom = 559.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_c2u1v")
@@ -541,6 +541,65 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_kv8mn")
 
+[node name="ScrollContainer" type="ScrollContainer" parent="policybg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -387.0
+offset_top = -293.0
+offset_right = 387.0
+offset_bottom = 361.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Policy" type="Label" parent="policybg/ScrollContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "🎮 Justice Junior – Game Policy (Basic Version)
+
+About the Game:
+Justice Junior is a fun and educational mobile game for kids aged 8 to 12. 
+It helps children learn about their rights, laws, and how to stay safe in real life 
+through stories, choices, and games.
+
+
+
+ 📌 What You Should Know
+
+* The game is safe for children.
+* No ads and no personal information is collected.
+* The game is free to play.
+* We do not collect names, phone numbers, or addresses.
+
+
+
+ 👨‍👩‍👧 Parental Info
+
+* Parents can check their child's progress.
+* No purchases or downloads are allowed without parent permission.
+* The game is made with the help of teachers and child experts.
+
+
+
+ 🚫 Be Respectful
+
+* Play fairly and kindly.
+* Don’t try to hack or misuse the app.
+* If something feels wrong, tell a parent or trusted adult.
+
+
+
+🛠 Support
+
+If you need help, email us at: 
+
+Justice Junior is made to help kids learn and grow while having fun. 
+Thank you for playing!"
+
 [node name="Label" type="Label" parent="policybg"]
 layout_mode = 1
 anchors_preset = 5
@@ -556,23 +615,6 @@ theme_override_font_sizes/font_size = 60
 text = "Policy"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Policy" type="Label" parent="policybg"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 60
-text = "Policy"
 
 [node name="CloseButton" type="Button" parent="policybg"]
 layout_mode = 1
